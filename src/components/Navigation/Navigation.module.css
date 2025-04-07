@@ -1,27 +1,12 @@
-/* .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  margin-bottom: 16px;
-  border-bottom: 1px solid black;
-}
-
-.nav {
-  display: flex;
-} */
 
 .link {
-  width: 200px;
-  text-align: center;
-  color: black;
-  border-radius: 8px;
-  padding: 5px 5px;
-  font-size: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #2a363b;
 }
 
 .link.active {
-  color: white;
-  background-color: orangered;
+  color: #e84a5f;
 }

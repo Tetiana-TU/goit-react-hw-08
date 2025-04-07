@@ -1,29 +1,13 @@
-const css = {
-  container: {
-    minHeight: "calc(100vh - 50px)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: "center",
-  },
-};
-
+import PageTitle from "../../components/PageTitle/PageTitle";
 export default function HomePage() {
   return (
-    <>
-      <title>Welcome</title>
-      <div style={css.container}>
-        <h1 style={css.title}>
-          Task manager welcome page{" "}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h1>
-      </div>
-    </>
+    <div>
+       <PageTitle>
+        Task manager welcome page{" "}
+        <span role="img" aria-label="Greeting icon">
+          💁‍♀️
+        </span>
+      </PageTitle>
+    </div>
   );
 }

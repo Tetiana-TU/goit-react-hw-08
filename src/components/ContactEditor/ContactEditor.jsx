@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/tasks/operations";
-import css from "./TaskEditor.module.css";
+import css from "./ContactEditor.module.css";
 
-export const TaskEditor = () => {
+export default function ContactEditor() {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -25,4 +25,4 @@ export const TaskEditor = () => {
       </button>
     </form>
   );
-};
+}
