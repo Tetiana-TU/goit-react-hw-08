@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaUser, FaPhone } from "react-icons/fa";
 import css from "./Contact.module.css";
 

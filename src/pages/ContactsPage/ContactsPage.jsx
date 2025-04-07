@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import  ContactList  from "../../components/ContactList/TaskList";
-import  ContactEditor  from "../../components/ContactEditor/TaskEditor";
+import  ContactList  from "../../components/ContactList/ContactList";
+import  ContactEditor  from "../../components/ContactEditor/ContactEditor";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectLoading } from "../../redux/contacts/selectors";
 
