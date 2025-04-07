@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import DocumentTitle from "../../components/DocumentTitle";
-import { TaskList } from "../../components/ContactList/TaskList";
-import { TaskEditor } from "../../components/ContactEditor/TaskEditor";
-import { fetchTasks } from "../../redux/contacts/operations";
+import { ContactList } from "../../components/ContactList/TaskList";
+import { ContactEditor } from "../../components/ContactEditor/TaskEditor";
+import { fetchContacts } from "../../redux/contacts/operations";
 import { selectLoading } from "../../redux/contacts/selectors";
 
 export default function ContactPage() {
@@ -16,8 +15,8 @@ export default function ContactPage() {
 
   return (
     <>
-      <DocumentTitle>Your contacts</DocumentTitle>
-      <TaskEditor />
+      <title>Your contacts</title>
+      <ContactEditor />
       <div>{isLoading && "Request in progress..."}</div>
       <ContactList />
     </>

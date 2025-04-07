@@ -1,6 +1,4 @@
-import DocumentTitle from "../../components/DocumentTitle";
-
-const styles = {
+const css = {
   container: {
     minHeight: "calc(100vh - 50px)",
     display: "flex",
@@ -17,10 +15,9 @@ const styles = {
 export default function HomePage() {
   return (
     <>
-      <DocumentTitle>Home</DocumentTitle>
-
-      <div style={styles.container}>
-        <h1 style={styles.title}>
+      <title>Welcome</title>
+      <div style={css.container}>
+        <h1 style={css.title}>
           Task manager welcome page{" "}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
