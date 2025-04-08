@@ -1,9 +1,11 @@
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field } from "formik";
+import { FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import css from "./LoginForm.module.css";
 
-export default function LoginForm  () {
+export default function LoginForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
@@ -11,25 +13,43 @@ export default function LoginForm  () {
     actions.resetForm();
   };
 
-     return (
+  return (
     <Formik
-    initialValues={{
-      email: '',
-      password: '',
-    }}
-    onSubmit={handleSubmit}
-  >
-    <Form className={css.form}  autoComplete="off">
-      <label className={css.label}>
-        Email
-        <Field type="email" name="email" />
-      </label>
-      <label className={css.label}>
-        Password
-        <Field type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </Form>
+      initialValues={{
+        email: "",
+        password: "",
+      }}
+      onSubmit={handleSubmit}
+    >
+      <Form className={css.wrapper} autoComplete="off">
+        <h1 className={css.heading}>Please log in</h1>
+        <div className={css.inputboxcontainer}>
+          <Field
+            className={css.inputbox}
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <MdEmail className={css.icon} />
+        </div>
+        <div className={css.inputboxcontainer}>
+          <Field
+            className={css.inputbox}
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <FaLock className={css.icon} />
+        </div>
+        <button type="submit">Log In</button>
+        <div className={css.registerlink}>
+          <p>
+            Don't have an account? <a href="/">Register</a>
+          </p>
+        </div>
+      </Form>
     </Formik>
   );
 }

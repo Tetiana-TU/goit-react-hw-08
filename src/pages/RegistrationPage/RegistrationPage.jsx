@@ -1,9 +1,9 @@
-import RegistrationForm  from "../../components/RegistrationForm/RegistrationForm";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
+// import PageTitle from "../../components/PageTitle/PageTitle";
 export default function RegisterPage() {
   return (
     <div>
-      <PageTitle>Registration</PageTitle>
+      {/* <PageTitle>Registration</PageTitle> */}
       <RegistrationForm />
     </div>
   );

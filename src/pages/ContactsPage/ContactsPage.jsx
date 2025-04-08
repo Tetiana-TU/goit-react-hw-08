@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import  ContactList  from "../../components/ContactList/ContactList";
-import  ContactEditor  from "../../components/ContactEditor/ContactEditor";
+import ContactList from "../../components/ContactList/ContactList";
+import ContactEditor from "../../components/ContactEditor/ContactEditor";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectLoading } from "../../redux/contacts/selectors";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
+  const loading = useSelector(selectLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -18,7 +18,7 @@ export default function ContactsPage() {
     <>
       <PageTitle>Your contacts</PageTitle>
       <ContactEditor />
-      <div>{isLoading && "Request in progress..."}</div>
+      <div>{loading && "Request in progress..."}</div>
       <ContactList />
     </>
   );

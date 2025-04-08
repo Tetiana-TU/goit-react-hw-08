@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations";
 // import { selectFilterName } from "../filters/slice";
-import { logOut } from '../auth/operations';
+import { logOut } from "../auth/operations";
 
 // const handlePending = (state) => {
 //   state.loading = true;
@@ -21,34 +21,34 @@ const contactsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
       })
       .addCase(fetchContacts.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = null;
         state.items = action.payload;
       })
       .addCase(fetchContacts.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.payload;
       })
       .addCase(addContact.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
       })
       .addCase(addContact.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = null;
         state.items.push(action.payload);
       })
       .addCase(addContact.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.payload;
       })
       .addCase(deleteContact.pending, (state) => {
-        state.isLoading = true;
+        state.loading = true;
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = null;
         const index = state.items.findIndex(
           (Contact) => Contact.id === action.payload.id
@@ -56,7 +56,7 @@ const contactsSlice = createSlice({
         state.items.splice(index, 1);
       })
       .addCase(deleteContact.rejected, (state, action) => {
-        state.isLoading = false;
+        state.loading = false;
         state.error = action.payload;
       })
       .addCase(logOut.fulfilled, (state) => {

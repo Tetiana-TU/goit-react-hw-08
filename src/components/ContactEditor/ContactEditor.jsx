@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/tasks/operations";
+import { addContact } from "../../redux/contacts/operations";
 import css from "./ContactEditor.module.css";
 
 export default function ContactEditor() {
@@ -14,7 +14,7 @@ export default function ContactEditor() {
       form.reset();
       return;
     }
-    alert("Task cannot be empty. Enter some text!");
+    alert("The field must be filled in!");
   };
 
   return (
