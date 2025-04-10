@@ -8,20 +8,28 @@ export default function ContactEditor() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const text = form.elements.text.value;
-    if (text !== "") {
-      dispatch(addContact(text));
+    const name = form.elements.name.value;
+    const number = form.elements.number.value;
+
+    if (name !== "" && number !== "") {
+      dispatch(addContact({ name, number }));
       form.reset();
       return;
     }
-    alert("The field must be filled in!");
-  };
 
+    alert("Please fill in both name and number.");
+  };
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <input name="text" className={css.input} />
-      <button type="submit" className={css.button}>
-        Add contact
+      <input className={css.field} type="text" name="name" placeholder="Name" />
+      <input
+        className={css.field}
+        type="text"
+        name="number"
+        placeholder="Phone number"
+      />
+      <button className={css.btn} type="submit">
+        Add Contact
       </button>
     </form>
   );
