@@ -21,7 +21,12 @@ export default function ContactEditor() {
   };
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <input className={css.field} type="text" name="name" placeholder="Name" />
+      <input 
+      className={css.field} 
+      type="text" 
+      name="name"
+       placeholder="Name" 
+       />
       <input
         className={css.field}
         type="text"

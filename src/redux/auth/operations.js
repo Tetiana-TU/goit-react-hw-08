@@ -5,9 +5,7 @@ const setAuthHeader = (value) => {
   axios.defaults.headers.common.Authorization = value;
 };
 
-const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = "";
-};
+
 
 export const register = createAsyncThunk(
   "auth/register",

@@ -44,12 +44,7 @@ export default function LoginForm() {
           <FaLock className={css.icon} />
         </div>
         <button type="submit">Log In</button>
-        <div className={css.registerlink}>
-          <p>
-            Don't have an account? <a href="/">Register</a>
-          </p>
-        </div>
-      </Form>
+              </Form>
     </Formik>
   );
 }

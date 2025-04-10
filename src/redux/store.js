@@ -12,7 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import contactsReducer from "./contacts/slice";
 import authReducer from "./auth/slice";
-
+import filtersReducer from './filters/slice'; 
 const persistedAuthReducer = persistReducer(
   {
     key: "user-token",
@@ -24,6 +24,7 @@ const persistedAuthReducer = persistReducer(
 
 export const store = configureStore({
   reducer: {
+    filters: filtersReducer,
     contacts: contactsReducer,
     auth: persistedAuthReducer,
   },
