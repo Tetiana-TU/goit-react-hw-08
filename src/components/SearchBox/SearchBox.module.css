@@ -2,14 +2,16 @@
   margin: 0;
   display: flex;
   text-align: left;
+  color: #ffffff;
+  font-size: 20px;
 }
+
 .containerSearchBox {
   display: flex;
   flex-direction: column;
 }
 .field {
   text-align: left;
-
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -18,4 +20,5 @@
   font-size: 16px;
   outline: none;
   transition: box-shadow 250ms linear;
+  margin-bottom: 12px;
 }
